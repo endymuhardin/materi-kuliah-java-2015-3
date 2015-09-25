@@ -26,3 +26,4 @@
 | 4513210004 | Aldi Reza          | Pemesanan Makanan
 | 4513210008 | Arief Rachman      | Penggajian Karyawan
 | 4512210016 | Muhammad Naufal    | Penjualan Mobil
+| 4513210023 | Muhammad Ismail    | Penjualan Baju Abaya
