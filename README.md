@@ -69,3 +69,4 @@
 * [Tutorial Resmi Android Programming](http://developer.android.com/guide/index.html)
 * [Video Tutorial di Youtube tentang Java Fundamental, Maven, dan Aplikasi Web](https://www.youtube.com/playlist?list=PLAx_QRVWQ-CyjYbvLWnYGEsmoWJyAIuvU)
 * [Video Tutorial di Youtube tentang Java Desktop](https://www.youtube.com/playlist?list=PL9oC_cq7OYbzcM4YZkTncDgfak0xKUQdf)
+* [Video Tutorial di Youtube tentang JDBC](https://www.youtube.com/watch?v=S_TBveKGqGU)
