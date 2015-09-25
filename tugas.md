@@ -27,3 +27,4 @@
 | 4513210008 | Arief Rachman      | Penggajian Karyawan
 | 4512210016 | Muhammad Naufal    | Penjualan Mobil
 | 4513210023 | Muhammad Ismail    | Penjualan Baju Abaya
+| 4513210013 | Danti Iswandhari   | Poliklinik
