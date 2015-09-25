@@ -1,2 +1,8 @@
 # Mac Ignore
 .DS_Store
+
+# Java Ignore
+*.class
+
+# Maven Ignore
+target
