@@ -5,6 +5,9 @@
  */
 package com.muhardin.endy.belajar.swing;
 
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author endymuhardin
@@ -208,6 +211,11 @@ public class FormRegistrasi extends javax.swing.JFrame {
 
         btnSave.setText("Save");
         btnSave.setEnabled(false);
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("Cancel");
         btnCancel.setEnabled(false);
@@ -283,6 +291,23 @@ public class FormRegistrasi extends javax.swing.JFrame {
         resetForm();
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        int konfirmasi = JOptionPane.showConfirmDialog(this, 
+                "Apakah Anda yakin?", 
+                "Konfirmasi", 
+                JOptionPane.OK_CANCEL_OPTION);
+        
+        if(JOptionPane.OK_OPTION == konfirmasi) {
+            tampilkanData();
+            resetForm();
+            disableEdit();
+            JOptionPane.showMessageDialog(this, 
+                    "Data sudah disimpan", 
+                    "Sukses", 
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_btnSaveActionPerformed
+
     private void enableEdit(){
         txtNama.setEditable(true);
         txtEmail.setEditable(true);
@@ -326,6 +351,24 @@ public class FormRegistrasi extends javax.swing.JFrame {
         txtUsername.setText("");
         txtPassword.setText("");
         txtKonfirmasiPassword.setText("");
+    }
+    
+    private void tampilkanData(){
+        System.out.println("Nama : "+txtNama.getText());
+        System.out.println("Email : "+txtEmail.getText());
+        System.out.println("Handphone : "+txtHandphone.getText());
+        String jenisKelamin = "-";
+        if(rbPria.isSelected()){
+            jenisKelamin = "Pria";
+        }
+        if(rbWanita.isSelected()){
+            jenisKelamin = "Wanita";
+        }
+        System.out.println("Jenis Kelamin : "+jenisKelamin);
+        System.out.println("Alamat : "+txtAlamat.getText());
+        System.out.println("Username : "+txtUsername.getText());
+        System.out.println("Password : "+Arrays.toString(txtPassword.getPassword()));
+        System.out.println("Konfirmasi password : "+Arrays.toString(txtKonfirmasiPassword.getPassword()));
     }
     
     /**
