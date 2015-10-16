@@ -34,6 +34,7 @@ public class DemoLookup extends JFrame {
 		tambahkanKomponen();
 		pasangEventHandler();
 
+		tampilkanLogin();
 	}
 
 	public void setPilihan(String tulisan){
@@ -62,6 +63,12 @@ public class DemoLookup extends JFrame {
 				dialog.setVisible(true);
 			}
 		});
+	}
+
+	private void tampilkanLogin(){
+		DemoLoginDialog d = new DemoLoginDialog(this);
+		d.setLocationRelativeTo(this);
+		d.setVisible(true);
 	}
 
 }
