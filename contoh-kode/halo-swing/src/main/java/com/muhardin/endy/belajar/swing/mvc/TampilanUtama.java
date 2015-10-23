@@ -3,6 +3,8 @@ package com.muhardin.endy.belajar.swing.mvc;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -48,12 +50,29 @@ public class TampilanUtama extends JFrame {
         MahasiswaTableModel mtm = new
         MahasiswaTableModel(dataMahasiswa);
 
-        JTable tbl = new JTable(mtm);
-        getContentPane().add(new JScrollPane(tbl));
+        tabelMahasiswa = new JTable(mtm);
+        getContentPane().add(new
+        JScrollPane(tabelMahasiswa));
     
     }
 
-    private void pasangEventHandler(){}
+    private void pasangEventHandler(){
+    
+       tabelMahasiswa.getSelectionModel().addListSelectionListener(new
+       ListSelectionListener(){
+        public void valueChanged(ListSelectionEvent e){
+            // ambil data dari row yang diklik
+            int barisYangDiklik = tabelMahasiswa.getSelectedRow();
+            System.out.println("Baris yang diklik : "+barisYangDiklik);
+            Mahasiswa m =
+            dataMahasiswa.get(barisYangDiklik);
+            System.out.println("NPM : "+m.getNpm());
+            System.out.println("Nama : "+m.getNama());
+
+        }
+       }); 
+    
+    }
 
     private JTable tabelMahasiswa;
     private List<Mahasiswa> dataMahasiswa;
