@@ -6,3 +6,6 @@
 
 # Maven Ignore
 target
+
+# Vim Ignore
+*swp
